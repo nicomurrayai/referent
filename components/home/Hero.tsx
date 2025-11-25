@@ -69,12 +69,15 @@ export default function Hero() {
                     <h1 className={`text-center text-4xl md:text-6xl tracking-tight text-white/80 leading-tight ${getTransitionClass("delay-200")}`}>
                         Posicionando CEOs y Startups <br />
                         con{' '}
-                        {/* Palabra Dinámica */}
-                        <span
-                            className={`inline-block transition-all duration-500 ease-in-out bg-clip-text text-transparent bg-linear-to-r from-orange-400 to-orange-950
-                            ${isVisible ? 'opacity-100 translate-y-0 blur-0' : 'opacity-0 translate-y-4 blur-sm'}`}
-                        >
-                            {WORDS[index]}
+                        {/* Contenedor con ancho fijo para evitar el reflow */}
+                        <span className="inline-block min-w-[150px] md:min-w-[280px]">
+                            {/* Palabra Dinámica */}
+                            <span
+                                className={`inline-block transition-all duration-500 ease-in-out bg-clip-text text-transparent bg-linear-to-r from-orange-400 to-orange-950
+                                ${isVisible ? 'opacity-100 translate-y-0 blur-0' : 'opacity-0 translate-y-4 blur-sm'}`}
+                            >
+                                {WORDS[index]}
+                            </span>
                         </span>
                     </h1>
 
@@ -110,7 +113,7 @@ export default function Hero() {
                             <span className="text-xl font-bold">Vippin</span>
                             <span className="text-xl font-bold">Pixelarios</span>
 
-                                {/* Duplicado para el loop infinito */}
+                            {/* Duplicado para el loop infinito */}
                             <span className="text-xl font-bold">PHILIPS</span>
                             <span className="text-xl font-bold">Allianz</span>
                             <span className="text-xl font-bold">LaCarta!</span>
