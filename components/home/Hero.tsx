@@ -95,7 +95,7 @@ export default function Hero() {
                     </div>
 
                     {/* Logos - Delay 700ms */}
-                    <div className="overflow-hidden w-[80%] md:w-[400px] mx-auto mt-10 text-gray-400 rounded-full">
+                    <div className={`overflow-hidden w-[80%] md:w-[400px] mx-auto mt-15 text-gray-400 rounded-full ${getTransitionClass("delay-700")}`}>
                         <div className="scroll-container flex gap-8 items-center">
                             <span className="text-xl font-bold">PHILIPS</span>
                             <span className="text-xl font-bold">Allianz</span>
