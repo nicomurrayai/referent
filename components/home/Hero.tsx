@@ -80,7 +80,7 @@ export default function Hero() {
                     </h1>
 
                     {/* Subtítulo - Delay 300ms */}
-                    <h2 className={`text-lg md:text-xl text-gray-400 mt-6 text-center font-light max-w-2xl ${getTransitionClass("delay-300")}`}>
+                    <h2 className={`text-lg md:text-xl text-gray-400 mt-6 text-center font-light ${getTransitionClass("delay-300")}`}>
                         Instalamos sistemas de posicionamiento que atraen <strong className="text-white font-semibold">usuarios, talento e inversión.</strong>
                     </h2>
 
