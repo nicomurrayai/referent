@@ -1,60 +1,76 @@
 "use client"
 
-import { useState, useEffect } from "react"; // 1. Importar hooks
+import { useState, useEffect } from "react"; 
 import { ArrowUpRight } from "lucide-react";
-import { Button } from "../ui/button";
-import Navbar from "./Navbar";
-import Particles from "../Particles";
+import { Button } from "../ui/button"; // Asegúrate que esta ruta sea correcta en tu proyecto
+import Navbar from "./Navbar";     // Asegúrate que esta ruta sea correcta
+import Particles from "../Particles"; // Asegúrate que esta ruta sea correcta
 
 export default function Hero() {
 
     const WORDS = ["Contenido.", "Estrategia.", "Landings."];
     
-    // 2. Estados para manejar el índice y la animación
     const [index, setIndex] = useState(0);
     const [isVisible, setIsVisible] = useState(true);
+    
+    // 1. Nuevo estado para controlar la animación de entrada inicial
+    const [mounted, setMounted] = useState(false);
 
-    // 3. Efecto para el ciclo de palabras
     useEffect(() => {
-        const interval = setInterval(() => {
-            // A. Ocultar palabra actual
-            setIsVisible(false);
+        // 2. Activamos la animación apenas se monta el componente
+        setMounted(true);
 
-            // B. Esperar a que termine la animación de salida (500ms) para cambiar el texto
+        const interval = setInterval(() => {
+            setIsVisible(false);
             setTimeout(() => {
                 setIndex((prevIndex) => (prevIndex + 1) % WORDS.length);
-                // C. Mostrar nueva palabra
                 setIsVisible(true);
             }, 500); 
-
-        }, 3000); // Cambia cada 3 segundos
+        }, 1900); 
 
         return () => clearInterval(interval);
     }, []);
+
+    // Helper para no repetir clases largas (Transición suave + Opacidad + Desplazamiento)
+    const getTransitionClass = (delayClass = "") => {
+        return `transition-all duration-1000 ease-out transform ${delayClass} ${
+            mounted ? "opacity-100 translate-y-0 filter blur-0" : "opacity-0 translate-y-8 filter blur-sm"
+        }`;
+    };
 
     return (
         <div className="relative w-full min-h-screen bg-black text-white overflow-hidden font-sans selection:bg-orange-500 selection:text-white">
             
             {/* --- FONDO Y EFECTOS --- */}
-            <div className="absolute top-[-10%] left-[-10%] w-[80%] h-[200px] bg-orange-500/40 rounded-full blur-[120px] pointer-events-none z-0"></div>
-            <div className="absolute bottom-[-10%] right-[-5%] w-[1000px] h-[350px]  bg-orange-500/30 rounded-full blur-[120px] pointer-events-none z-0"></div>
-            <Particles />
+            {/* Agregamos una transición lenta al fondo también para que no aparezca de golpe */}
+            <div className={`transition-opacity duration-[2000ms] ${mounted ? 'opacity-100' : 'opacity-0'}`}>
+                <div className="absolute top-[-10%] left-[-10%] w-[80%] h-[200px] bg-orange-500/40 rounded-full blur-[120px] pointer-events-none z-0"></div>
+                <div className="absolute bottom-[-10%] right-[-5%] w-[1000px] h-[350px] bg-orange-500/30 rounded-full blur-[120px] pointer-events-none z-0"></div>
+                <Particles />
+            </div>
 
             {/* --- CONTENIDO --- */}
             <div className="relative z-10">
-                <Navbar />
+                
+                {/* Navbar con delay inicial */}
+                <div className={getTransitionClass("delay-0")}>
+                    <Navbar />
+                </div>
                 
                 <div className="mt-32 flex flex-col items-center justify-center px-4">
-                    {/* Badge */}
-                    <span className="border border-gray-800 text-gray-300 text-base font-medium px-3 py-1 rounded-full bg-white/5 backdrop-blur-sm mb-6">
-                        200M VIEWS
-                    </span>
+                    
+                    {/* Badge - Delay 100ms */}
+                    <div className={getTransitionClass("delay-100")}>
+                        <span className="border border-gray-800 text-gray-300 text-base font-medium px-3 py-1 rounded-full bg-white/5 backdrop-blur-sm mb-6 inline-block">
+                            200M VIEWS
+                        </span>
+                    </div>
 
-                    {/* Título Principal */}
-                    <h1 className="text-center text-5xl md:text-7xl tracking-tight text-white/80 leading-tight">
+                    {/* Título Principal - Delay 200ms */}
+                    <h1 className={`text-center text-5xl md:text-7xl tracking-tight text-white/80 leading-tight ${getTransitionClass("delay-200")}`}>
                         Posicionando CEOs y Startups <br />
                         con{' '}
-                        {/* 4. Palabra Dinámica con Transición */}
+                        {/* Palabra Dinámica */}
                         <span 
                             className={`inline-block transition-all duration-500 ease-in-out bg-clip-text text-transparent bg-linear-to-r from-orange-400 to-orange-950
                             ${isVisible ? 'opacity-100 translate-y-0 blur-0' : 'opacity-0 translate-y-4 blur-sm'}`}
@@ -63,15 +79,15 @@ export default function Hero() {
                         </span>
                     </h1>
 
-                    {/* Subtítulo */}
-                    <h2 className="text-lg md:text-xl text-gray-400 mt-6 text-center font-light">
+                    {/* Subtítulo - Delay 300ms */}
+                    <h2 className={`text-lg md:text-xl text-gray-400 mt-6 text-center font-light max-w-2xl ${getTransitionClass("delay-300")}`}>
                         Instalamos sistemas de posicionamiento que atraen <strong className="text-white font-semibold">usuarios, talento e inversión.</strong>
                     </h2>
 
-                    {/* Botones */}
-                    <div className="flex items-center gap-4 mt-10">
-                        <Button >
-                            Quiero posicionarme <ArrowUpRight />
+                    {/* Botones - Delay 500ms */}
+                    <div className={`flex items-center gap-4 mt-10 ${getTransitionClass("delay-500")}`}>
+                        <Button>
+                            Quiero posicionarme <ArrowUpRight className="ml-2 w-4 h-4"/>
                         </Button>
                         
                         <Button variant="outline" className="bg-transparent border border-gray-700 text-white hover:bg-white/5 hover:text-white">
@@ -79,8 +95,8 @@ export default function Hero() {
                         </Button>
                     </div>
 
-                    {/* Logos */}
-                    <div className="mt-20 flex flex-wrap justify-center gap-8 opacity-40 grayscale items-center">
+                    {/* Logos - Delay 700ms */}
+                    <div className={`mt-20 flex flex-wrap justify-center gap-8 opacity-40 grayscale items-center ${getTransitionClass("delay-700")}`}>
                          <span className="text-xl font-bold">PHILIPS</span>
                          <span className="text-xl font-bold">Allianz</span>
                          <span className="text-xl font-bold">LaCarta!</span>
