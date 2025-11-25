@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"; 
+import { useState, useEffect } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { Button } from "../ui/button"; // Asegúrate que esta ruta sea correcta en tu proyecto
 import Navbar from "./Navbar";     // Asegúrate que esta ruta sea correcta
@@ -9,10 +9,10 @@ import Particles from "../Particles"; // Asegúrate que esta ruta sea correcta
 export default function Hero() {
 
     const WORDS = ["Contenido.", "Estrategia.", "Landings."];
-    
+
     const [index, setIndex] = useState(0);
     const [isVisible, setIsVisible] = useState(true);
-    
+
     // 1. Nuevo estado para controlar la animación de entrada inicial
     const [mounted, setMounted] = useState(false);
 
@@ -25,22 +25,21 @@ export default function Hero() {
             setTimeout(() => {
                 setIndex((prevIndex) => (prevIndex + 1) % WORDS.length);
                 setIsVisible(true);
-            }, 500); 
-        }, 1900); 
+            }, 500);
+        }, 1900);
 
         return () => clearInterval(interval);
     }, []);
 
     // Helper para no repetir clases largas (Transición suave + Opacidad + Desplazamiento)
     const getTransitionClass = (delayClass = "") => {
-        return `transition-all duration-1000 ease-out transform ${delayClass} ${
-            mounted ? "opacity-100 translate-y-0 filter blur-0" : "opacity-0 translate-y-8 filter blur-sm"
-        }`;
+        return `transition-all duration-1000 ease-out transform ${delayClass} ${mounted ? "opacity-100 translate-y-0 filter blur-0" : "opacity-0 translate-y-8 filter blur-sm"
+            }`;
     };
 
     return (
         <div className="relative w-full min-h-screen bg-black text-white overflow-hidden font-sans selection:bg-orange-500 selection:text-white">
-            
+
             {/* --- FONDO Y EFECTOS --- */}
             {/* Agregamos una transición lenta al fondo también para que no aparezca de golpe */}
             <div className={`transition-opacity duration-2000 ${mounted ? 'opacity-100' : 'opacity-0'}`}>
@@ -51,14 +50,14 @@ export default function Hero() {
 
             {/* --- CONTENIDO --- */}
             <div className="relative z-10">
-                
+
                 {/* Navbar con delay inicial */}
                 <div className={getTransitionClass("delay-0")}>
                     <Navbar />
                 </div>
-                
+
                 <div className="mt-20 md:mt-32 flex flex-col items-center justify-center px-4">
-                    
+
                     {/* Badge - Delay 100ms */}
                     <div className={getTransitionClass("delay-100")}>
                         <span className="border border-gray-800 text-gray-300 text-base font-medium px-3 py-1 rounded-full bg-white/5 backdrop-blur-sm mb-6 inline-block">
@@ -71,7 +70,7 @@ export default function Hero() {
                         Posicionando CEOs y Startups <br />
                         con{' '}
                         {/* Palabra Dinámica */}
-                        <span 
+                        <span
                             className={`inline-block transition-all duration-500 ease-in-out bg-clip-text text-transparent bg-linear-to-r from-orange-400 to-orange-950
                             ${isVisible ? 'opacity-100 translate-y-0 blur-0' : 'opacity-0 translate-y-4 blur-sm'}`}
                         >
@@ -87,22 +86,39 @@ export default function Hero() {
                     {/* Botones - Delay 500ms */}
                     <div className={`flex items-center gap-4 mt-10 ${getTransitionClass("delay-500")}`}>
                         <Button>
-                            Quiero posicionarme <ArrowUpRight className="ml-2 w-4 h-4"/>
+                            Quiero posicionarme <ArrowUpRight className="ml-2 w-4 h-4" />
                         </Button>
-                        
+
                         <Button variant="outline" className="bg-transparent border border-gray-700 text-white hover:bg-white/5 hover:text-white">
                             Ver en acción
                         </Button>
                     </div>
 
                     {/* Logos - Delay 700ms */}
-                    <div className={`mt-20 flex flex-wrap justify-center gap-8 opacity-40 grayscale items-center ${getTransitionClass("delay-700")}`}>
-                         <span className="text-xl font-bold">PHILIPS</span>
-                         <span className="text-xl font-bold">Allianz</span>
-                         <span className="text-xl font-bold">LaCarta!</span>
-                         <span className="text-xl font-bold">Vippin</span>
-                         <span className="text-xl font-bold">Pixelarios</span>
+                    <div className="overflow-hidden w-[80%] md:w-[400px] mx-auto mt-10 text-gray-400 rounded-full">
+                        <div className="scroll-container flex gap-8 items-center">
+                            <span className="text-xl font-bold">PHILIPS</span>
+                            <span className="text-xl font-bold">Allianz</span>
+                            <span className="text-xl font-bold">LaCarta!</span>
+                            <span className="text-xl font-bold">Vippin</span>
+                            <span className="text-xl font-bold">Pixelarios</span>
+
+                            {/* Duplicado para el loop infinito */}
+                            <span className="text-xl font-bold">PHILIPS</span>
+                            <span className="text-xl font-bold">Allianz</span>
+                            <span className="text-xl font-bold">LaCarta!</span>
+                            <span className="text-xl font-bold">Vippin</span>
+                            <span className="text-xl font-bold">Pixelarios</span>
+
+                                {/* Duplicado para el loop infinito */}
+                            <span className="text-xl font-bold">PHILIPS</span>
+                            <span className="text-xl font-bold">Allianz</span>
+                            <span className="text-xl font-bold">LaCarta!</span>
+                            <span className="text-xl font-bold">Vippin</span>
+                            <span className="text-xl font-bold">Pixelarios</span>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </div>

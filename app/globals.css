@@ -119,4 +119,19 @@
   body {
     @apply bg-black text-white text-foreground;
   }
+  @keyframes infinite-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.scroll-container {
+  display: flex;
+  width: max-content;
+  animation: infinite-scroll 30s linear infinite;
+}
+
 }
