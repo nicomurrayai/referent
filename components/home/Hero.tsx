@@ -56,7 +56,7 @@ export default function Hero() {
                     <Navbar />
                 </div>
 
-                <div className="mt-20 md:mt-32 flex flex-col items-center justify-center px-4">
+                <div className="mt-15 md:mt-32 flex flex-col items-center justify-center px-4">
 
                     {/* Badge - Delay 100ms */}
                     <div className={getTransitionClass("delay-100")}>
