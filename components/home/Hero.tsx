@@ -10,10 +10,10 @@ export default function Hero() {
             {/* --- FONDO Y EFECTOS --- */}
             
             {/* Destello Naranja Superior Izquierda */}
-            <div className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-orange-600/20 rounded-full blur-[120px] pointer-events-none z-0"></div>
+            <div className="absolute top-[-10%] left-[-10%] w-[80%] h-[200px] bg-orange-500/40 rounded-full blur-[120px] pointer-events-none z-0"></div>
             
             {/* Destello Naranja Inferior Derecha (Más intenso como en la imagen) */}
-            <div className="absolute bottom-[-10%] right-[-5%] w-[600px] h-[600px] bg-orange-700/15 rounded-full blur-[120px] pointer-events-none z-0"></div>
+            <div className="absolute bottom-[-10%] right-[-5%] w-[1000px] h-[350px]  bg-orange-500/30 rounded-full blur-[120px] pointer-events-none z-0"></div>
 
             {/* Efecto de Partículas */}
             <Particles />
@@ -40,12 +40,12 @@ export default function Hero() {
                     </h2>
 
                     {/* Botones */}
-                    <div className="flex flex-col sm:flex-row items-center gap-4 mt-10">
-                        <Button className="bg-[#FF6600] hover:bg-[#ff7b24] text-white font-medium px-6 py-6 text-lg rounded-lg border-none shadow-[0_0_20px_rgba(255,102,0,0.3)] transition-all">
-                            Quiero posicionarme <ArrowUpRight className="ml-2 w-5 h-5" />
+                    <div className="flex items-center gap-4 mt-10">
+                        <Button >
+                            Quiero posicionarme <ArrowUpRight />
                         </Button>
                         
-                        <Button variant="outline" className="bg-transparent border border-gray-700 text-white hover:bg-white/5 hover:text-white px-6 py-6 text-lg rounded-lg transition-all">
+                        <Button variant="outline" className="bg-transparent border border-gray-700 text-white hover:bg-white/5 hover:text-white">
                             Ver en acción
                         </Button>
                     </div>
