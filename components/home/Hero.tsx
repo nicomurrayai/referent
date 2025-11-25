@@ -43,7 +43,7 @@ export default function Hero() {
             {/* --- FONDO Y EFECTOS --- */}
             {/* Agregamos una transición lenta al fondo también para que no aparezca de golpe */}
             <div className={`transition-opacity duration-2000 ${mounted ? 'opacity-100' : 'opacity-0'}`}>
-                <div className="absolute top-[-10%] left-[-10%] w-[80%] h-[200px] bg-orange-500/40 rounded-full blur-[120px] pointer-events-none z-0"></div>
+                <div className="absolute top-[-10%] left-[-10%] w-[60%] h-[150px] bg-orange-500/40 rounded-full blur-[120px] pointer-events-none z-0"></div>
                 <div className="absolute bottom-[-10%] right-[-5%] w-[1000px] h-[350px] bg-orange-500/30 rounded-full blur-[120px] pointer-events-none z-0"></div>
                 <Particles />
             </div>
