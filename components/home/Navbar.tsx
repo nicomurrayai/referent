@@ -14,7 +14,7 @@ export default function Navbar() {
       {/* Contenedor sticky con padding */}
       <div className="sticky top-0 z-140 w-full flex justify-center py-5 px-4">
         {/* --- NAVBAR PRINCIPAL --- */}
-        <nav className="flex justify-between items-center p-4 w-full rounded-lg bg-black/70 border border-gray-800 max-w-[1400px] px-6 md:px-10 backdrop-blur-md shadow-lg">
+        <nav className="flex justify-between items-center p-4 w-full rounded-lg bg-black/70 border border-gray-800 max-w-[1200px]   backdrop-blur-md shadow-lg">
           
           {/* Logo */}
           <Link href="/">
@@ -34,8 +34,8 @@ export default function Navbar() {
               <Button className="bg-orange-500 hover:bg-orange-600 text-white border-none">
                 Agendar llamada <ArrowUpRight className="ml-2 h-4 w-4" />
               </Button>
-              <Button className="bg-black hover:bg-gray-900 text-white border border-gray-700">
-                <Globe className="mr-2 h-4 w-4" /> ES
+              <Button className="bg-black text-white">
+                <Globe  /> ES
               </Button>
             </div>
           </div>

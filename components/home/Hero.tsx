@@ -56,7 +56,7 @@ export default function Hero() {
                     <Navbar />
                 </div>
 
-                <div className="mt-15 md:mt-32 flex flex-col items-center justify-center px-4">
+                <div className="mt-15 md:mt-20 flex flex-col items-center justify-center px-4">
 
                     {/* Badge - Delay 100ms */}
                     <div className={getTransitionClass("delay-100")}>
@@ -66,7 +66,7 @@ export default function Hero() {
                     </div>
 
                     {/* Título Principal - Delay 200ms */}
-                    <h1 className={`text-center text-4xl md:text-7xl tracking-tight text-white/80 leading-tight ${getTransitionClass("delay-200")}`}>
+                    <h1 className={`text-center text-4xl md:text-6xl tracking-tight text-white/80 leading-tight ${getTransitionClass("delay-200")}`}>
                         Posicionando CEOs y Startups <br />
                         con{' '}
                         {/* Palabra Dinámica */}
