@@ -66,7 +66,7 @@ export default function Hero() {
                     </div>
 
                     {/* Título Principal - Delay 200ms */}
-                    <h1 className={`text-center text-5xl md:text-7xl tracking-tight text-white/80 leading-tight ${getTransitionClass("delay-200")}`}>
+                    <h1 className={`text-center text-4xl md:text-7xl tracking-tight text-white/80 leading-tight ${getTransitionClass("delay-200")}`}>
                         Posicionando CEOs y Startups <br />
                         con{' '}
                         {/* Palabra Dinámica */}
@@ -89,7 +89,7 @@ export default function Hero() {
                             Quiero posicionarme <ArrowUpRight className="ml-2 w-4 h-4" />
                         </Button>
 
-                        <Button variant="outline" className="bg-transparent border border-gray-700 text-white hover:bg-white/5 hover:text-white">
+                        <Button variant="outline" className="bg-white/5 hover:bg-transparent hover:text-white">
                             Ver en acción
                         </Button>
                     </div>

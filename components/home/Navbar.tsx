@@ -45,7 +45,7 @@ export default function Navbar() {
             className="md:hidden text-white hover:text-orange-500 transition-colors"
             onClick={() => setIsOpen(true)}
           >
-            <Menu size={28} />
+            <Menu size={24} />
           </button>
         </nav>
       </div>
