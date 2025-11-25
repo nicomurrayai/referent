@@ -24,17 +24,17 @@ export default function Navbar() {
           {/* --- DESKTOP MENU (Visible solo en md en adelante) --- */}
           <div className="hidden md:flex items-center gap-4">
             <div className="flex items-center gap-6 text-sm font-medium text-white">
-              <Link href="#" className="hover:text-orange-500 transition-colors">Procesos</Link>
-              <Link href="#" className="hover:text-orange-500 transition-colors">Servicios</Link>
-              <Link href="#" className="hover:text-orange-500 transition-colors">Beneficios</Link>
-              <Link href="#" className="hover:text-orange-500 transition-colors">Testimonios</Link>
-              <Link href="#" className="hover:text-orange-500 transition-colors">Contacto</Link>
+              <Link href="#" className="hover:text-primary transition-colors">Procesos</Link>
+              <Link href="#" className="hover:text-primary transition-colors">Servicios</Link>
+              <Link href="#" className="hover:text-primary transition-colors">Beneficios</Link>
+              <Link href="#" className="hover:text-primary transition-colors">Testimonios</Link>
+              <Link href="#" className="hover:text-primary transition-colors">Contacto</Link>
             </div>
-            <div className="flex items-center gap-2">
-              <Button className="bg-orange-500 hover:bg-orange-600 text-white border-none">
-                Agendar llamada <ArrowUpRight className="ml-2 h-4 w-4" />
+            <div className="flex items-center gap-2 ml-4">
+              <Button>
+                Agendar llamada <ArrowUpRight />
               </Button>
-              <Button className="bg-black text-white">
+              <Button className="bg-black text-white hover:bg-black">
                 <Globe  /> ES
               </Button>
             </div>
@@ -42,7 +42,7 @@ export default function Navbar() {
 
           {/* --- MOBILE TOGGLE BUTTON (Visible solo en móviles) --- */}
           <button 
-            className="md:hidden text-white hover:text-orange-500 transition-colors"
+            className="md:hidden"
             onClick={() => setIsOpen(true)}
           >
             <Menu size={24} />

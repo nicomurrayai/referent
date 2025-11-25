@@ -86,7 +86,7 @@ export default function Hero() {
                     {/* Botones - Delay 500ms */}
                     <div className={`flex items-center gap-4 mt-10 ${getTransitionClass("delay-500")}`}>
                         <Button>
-                            Quiero posicionarme <ArrowUpRight className="ml-2 w-4 h-4" />
+                            Quiero posicionarme <ArrowUpRight />
                         </Button>
 
                         <Button variant="outline" className="bg-white/5 hover:bg-transparent hover:text-white">
