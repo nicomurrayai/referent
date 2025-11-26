@@ -57,7 +57,7 @@ export default function Services() {
         {
             title: "Sistema de adquisición",
             description: "Creamos un flujo de adquisición que identifica, atrae y convierte a tus usuarios ideales con precisión.Menos ruido, más leads calificados y crecimiento sostenido.",
-            image: "/process2.png",
+            image: "/service10.png",
             colSpan: 2
         },
         {
