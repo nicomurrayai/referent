@@ -42,7 +42,7 @@ export default function Navbar() {
 
             <div className="flex items-center gap-2 ml-4">
               <Link target="_blank" href="https://calendly.com/matiasnoguera">
-                <Button>Agendar llamada <ArrowUpRight className="w-4 h-4 ml-1" /></Button>
+                <Button>Agendar llamada <ArrowUpRight  /></Button>
               </Link>
 
               <Button className="bg-black text-white hover:bg-black">
