@@ -61,14 +61,14 @@ export default function Hero() {
 
                     {/* Badge - Delay 100ms */}
                     <div className={getTransitionClass("delay-100")}>
-                        <span className="border border-gray-800 text-gray-300 text-base font-medium px-3 py-1 rounded-full bg-white/5 backdrop-blur-sm mb-6 inline-block">
+                        <span className="shadow-gray-400 shadow text-white text-base font-medium px-3 py-1 rounded-full bg-black/40 mb-6 inline-block">
                             200M VIEWS
                         </span>
                     </div>
 
                     {/* Título Principal - Delay 200ms */}
                     <h1 className={`text-center text-4xl md:text-6xl tracking-tight text-white/80 leading-tight ${getTransitionClass("delay-200")}`}>
-                        Posicionando CEOs y Startups <br />
+                        Posicionando <br className="md:hidden" />CEOs y Startups <br />
                         con{' '}
                         {/* Contenedor con ancho fijo para evitar el reflow */}
                         <span className="inline-block min-w-[150px] md:min-w-[280px]">
