@@ -18,7 +18,7 @@ export default function Navbar() {
       <div className="sticky top-0 z-50 w-full flex justify-center py-5 px-4">
         {/* --- NAVBAR PRINCIPAL --- */}
         <nav className="flex justify-between items-center p-4 w-full rounded-lg bg-black/70 border border-gray-800 max-w-[1200px] backdrop-blur-md shadow-lg">
-          
+
           {/* Logo */}
           <Link href="/">
             <Image
@@ -27,7 +27,7 @@ export default function Navbar() {
               height={120}
               alt="logo"
               className="w-24 md:w-[120px] h-auto"
-              // Nota: Asegúrate de tener una imagen en /logo.png
+            // Nota: Asegúrate de tener una imagen en /logo.png
             />
           </Link>
 
@@ -42,11 +42,12 @@ export default function Navbar() {
             </div>
 
             <div className="flex items-center gap-2 ml-4">
-              <Button>
-                Agendar llamada <ArrowUpRight className="w-4 h-4 ml-1" />
-              </Button>
+              <Link target="_blank" href="https://calendly.com/matiasnoguera">
+                <Button>Agendar llamada <ArrowUpRight className="w-4 h-4 ml-1" /></Button>
+              </Link>
+
               <Button className="bg-black text-white hover:bg-black">
-                <Globe className="w-4 h-4 mr-1"/> ES
+                <Globe className="w-4 h-4 mr-1" /> ES
               </Button>
             </div>
           </div>
@@ -62,7 +63,7 @@ export default function Navbar() {
       </div>
 
       {/* --- MOBILE MENU OVERLAY COMPLETO (responsive, cubre todo el alto) --- */}
-    
+
     </>
   );
 }

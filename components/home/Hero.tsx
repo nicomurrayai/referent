@@ -5,6 +5,7 @@ import { ArrowUpRight } from "lucide-react";
 import { Button } from "../ui/button"; // Asegúrate que esta ruta sea correcta en tu proyecto
 import Navbar from "./Navbar";     // Asegúrate que esta ruta sea correcta
 import Particles from "../Particles"; // Asegúrate que esta ruta sea correcta
+import Link from "next/link";
 
 export default function Hero() {
 
@@ -83,14 +84,14 @@ export default function Hero() {
 
                     {/* Subtítulo - Delay 300ms */}
                     <h2 className={`text-lg md:text-xl text-gray-400 mt-6 text-center font-light ${getTransitionClass("delay-300")}`}>
-                        Instalamos sistemas de posicionamiento que atraen <strong className="text-white font-semibold">usuarios, talento e inversión.</strong>
+                        Instalamos sistemas de posicionamiento <br className="md:hidden" />que atraen <strong className="text-white font-semibold"> usuarios, talento e inversión.</strong>
                     </h2>
 
                     {/* Botones - Delay 500ms */}
                     <div className={`flex items-center gap-4 mt-10 ${getTransitionClass("delay-500")}`}>
-                        <Button>
-                            Quiero posicionarme <ArrowUpRight />
-                        </Button>
+                        <Link target="_blank" href="https://calendly.com/matiasnoguera">
+                            <Button>Quiero Posicionarme <ArrowUpRight className="w-4 h-4 ml-1" /></Button>
+                        </Link>
 
                         <Button variant="outline" className="bg-white/5 hover:bg-transparent hover:text-white">
                             Ver en acción
