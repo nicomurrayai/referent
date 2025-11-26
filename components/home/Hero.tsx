@@ -61,7 +61,7 @@ export default function Hero() {
 
                     {/* Badge - Delay 100ms */}
                     <div className={getTransitionClass("delay-100")}>
-                        <span className="shadow-gray-400 shadow text-white text-sm md:text-base font-medium px-3 py-1 rounded-full bg-black/40 mb-6 inline-block">
+                        <span className="shadow-gray-400 shadow text-white text-xs md:text-base font-medium px-3 py-1 rounded-full bg-black/40 mb-6 inline-block">
                             200M VIEWS
                         </span>
                     </div>
