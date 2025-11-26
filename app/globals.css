@@ -134,4 +134,12 @@
   animation: infinite-scroll 30s linear infinite;
 }
 
+h3 {
+  @apply text-5xl font-medium text-center mb-4
+}
+
+h4 {
+  @apply text-xl text-center text-white/80
+}
+
 }
