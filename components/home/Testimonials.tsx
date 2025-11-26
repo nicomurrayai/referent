@@ -32,11 +32,10 @@ export default function Testimonials() {
     }, []);
 
     const getTransitionClass = (delayClass = "") => {
-        return `transition-all duration-1000 ease-out transform ${delayClass} ${
-            isVisibleInView
+        return `transition-all duration-1000 ease-out transform ${delayClass} ${isVisibleInView
                 ? "opacity-100 translate-y-0 filter blur-0"
                 : "opacity-0 translate-y-8 filter blur-sm"
-        }`;
+            }`;
     };
 
     // 🔥 ARRAY DE TESTIMONIOS
@@ -49,48 +48,48 @@ export default function Testimonials() {
             imageSrc: "/avatar1.jpg",
         },
         {
-            quote: "Su forma de trabajo es impecable. Desde el primer mes empecé a ver resultados.",
-            name: "Mariana López",
-            title: "Founder",
-            company: "MKT Studio",
-            imageSrc: "/avatar2.jpg",
-        },
-        {
-            quote: "Profesionales, rápidos y con enfoque estratégico. Los recomiendo a todos mis clientes.",
-            name: "Julián Torres",
-            title: "Director",
-            company: "Agencia Nord",
-            imageSrc: "/avatar3.jpg",
-        },
-          {
-            quote: "El equipo de Referent fue la pieza clave para construir mi marca personal en LinkedIn.",
-            name: "Facundo Aguirre",
+            quote: "Referent Media fue la via que necesitaba para tener leads constantes y posicionar mi marca, superamos los 10.000 seguidores en 92 dias!",
+            name: "Alexandra Ponton",
             title: "CEO",
-            company: "Vippen",
-            imageSrc: "/avatar1.jpg",
+            company: "All for Women",
+            imageSrc: "/avatar2.jpg",
+        },
+        {
+            quote: "Con Referent, instalamos el sistema de adquisicion que me permitió pasar mi marca de los 4.000 seguidores a +8000",
+            name: "Grace Reynosa",
+            title: "CEO",
+            company: "Metodo ATA",
+            imageSrc: "/avatar3.jpg",
+        },
+        {
+            quote: "Trabajar con Referent fue una gran experiencia. Me permitió optimizar mi propuesta de valor y landing page",
+            name: "Wolf",
+            title: "CEO",
+            company: "Wolfy's Bar",
+            imageSrc: "/avatar6.png",
+        },
+        {
+            quote: "Referent cambió totalmente mi proyecto dandome vision y claridad de mis proximos pasos, escalé de 0 a 4.000 seguidores en 40 dias",
+            name: "Francisco Asef",
+            title: "CEO",
+            company: "Rule your Mood",
+            imageSrc: "/avatar4.png",
         },
         {
             quote: "Su forma de trabajo es impecable. Desde el primer mes empecé a ver resultados.",
             name: "Mariana López",
             title: "Founder",
             company: "MKT Studio",
-            imageSrc: "/avatar2.jpg",
+            imageSrc: "/avatar5.jpg",
         },
-        {
-            quote: "Profesionales, rápidos y con enfoque estratégico. Los recomiendo a todos mis clientes.",
-            name: "Julián Torres",
-            title: "Director",
-            company: "Agencia Nord",
-            imageSrc: "/avatar3.jpg",
-        },
+
     ];
 
     return (
         <section className="relative w-full py-20 bg-black overflow-hidden">
             <div
-                className={`absolute inset-0 w-full h-full pointer-events-none transition-opacity duration-2000 ${
-                    isVisibleInView ? "opacity-100" : "opacity-0"
-                }`}
+                className={`absolute inset-0 w-full h-full pointer-events-none transition-opacity duration-2000 ${isVisibleInView ? "opacity-100" : "opacity-0"
+                    }`}
             >
                 <Particles />
             </div>
