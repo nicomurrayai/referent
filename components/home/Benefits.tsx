@@ -43,18 +43,18 @@ export default function Benefits() {
     // ⬅️ Ahora los beneficios usan íconos Lucide
     const benefits = [
         {
-            title: "Resultados rápidos",
-            description: "Implementamos soluciones simples y efectivas para que veas impacto inmediato.",
+            title: "Productividad multiplicada",
+            description: "Simplificamos tu proceso de creación y te damos un sistema claro para producir contenido sin fricción. Más piezas, más calidad, menos esfuerzo.",
             icon: Timer,
         },
         {
-            title: "Escalabilidad real",
-            description: "Creamos sistemas que crecen con tu marca sin perder calidad ni velocidad.",
+            title: "Posicionamiento acelerado",
+            description: "Instalamos un sistema de narrativa y contenido que te convierte en referente de tu industria. Atraés usuarios, oportunidades y contactos clave sin perseguir nada.",
             icon: Rocket,
         },
         {
-            title: "Máxima seguridad",
-            description: "Buenas prácticas, workflows probados y protección en cada etapa.",
+            title: "Crecimiento predecible",
+            description: "Optimizamos tu presencia, tus landings y tu contenido para que cada mes mejores tus métricas. Más alcance, más leads y más claridad para escalar.",
             icon: ShieldCheck,
         }
     ];

@@ -14,7 +14,7 @@ export default function BenefitCard({ title, description, icon: Icon }: Benefits
         relative p-8 rounded-3xl bg-white/5 border border-white/10 
         overflow-hidden h-full flex flex-col
         transition-all duration-300 ease-out
-        hover:scale-[1.02] hover:shadow-xl hover:shadow-orange-500/10
+        hover:scale-[1.02]
       "
     >
       {/* Glow decorativo */}
@@ -30,7 +30,7 @@ export default function BenefitCard({ title, description, icon: Icon }: Benefits
       <div className="relative z-10 flex flex-col items-center justify-center text-center h-full">
         
         {/* Ícono */}
-        <div className="mb-4 p-3 bg-black rounded-2xl w-fit">
+        <div className="mb-4 p-3 bg-white/5 rounded-2xl w-fit">
           <Icon className="size-8 text-primary drop-shadow" />
         </div>
 
