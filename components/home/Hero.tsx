@@ -2,9 +2,9 @@
 
 import { useState, useEffect } from "react";
 import { ArrowUpRight } from "lucide-react";
-import { Button } from "../ui/button"; // Asegúrate que esta ruta sea correcta en tu proyecto
-import Navbar from "./Navbar";     // Asegúrate que esta ruta sea correcta
-import Particles from "../Particles"; // Asegúrate que esta ruta sea correcta
+import { Button } from "../ui/button";
+import Navbar from "./Navbar";
+import Particles from "../Particles";
 import Link from "next/link";
 
 export default function Hero() {
@@ -12,21 +12,17 @@ export default function Hero() {
     const WORDS = ["Contenido.", "Estrategia.", "Landings."];
 
     const [index, setIndex] = useState(0);
-    const [isVisible, setIsVisible] = useState(true);
-
-    // 1. Nuevo estado para controlar la animación de entrada inicial
     const [mounted, setMounted] = useState(false);
 
+    // Efecto para la animación inicial (solo se ejecuta una vez)
     useEffect(() => {
-        // 2. Activamos la animación apenas se monta el componente
         setMounted(true);
+    }, []);
 
+    // Efecto separado para el cambio de palabras
+    useEffect(() => {
         const interval = setInterval(() => {
-            setIsVisible(false);
-            setTimeout(() => {
-                setIndex((prevIndex) => (prevIndex + 1) % WORDS.length);
-                setIsVisible(true);
-            }, 500);
+            setIndex((prevIndex) => (prevIndex + 1) % WORDS.length);
         }, 1900);
 
         return () => clearInterval(interval);
@@ -34,8 +30,9 @@ export default function Hero() {
 
     // Helper para no repetir clases largas (Transición suave + Opacidad + Desplazamiento)
     const getTransitionClass = (delayClass = "") => {
-        return `transition-all duration-1000 ease-out transform ${delayClass} ${mounted ? "opacity-100 translate-y-0 filter blur-0" : "opacity-0 translate-y-8 filter blur-sm"
-            }`;
+        return `transition-all duration-1000 ease-out transform ${delayClass} ${
+            mounted ? "opacity-100 translate-y-0 filter blur-0" : "opacity-0 translate-y-8 filter blur-sm"
+        }`;
     };
 
     return (
@@ -46,14 +43,16 @@ export default function Hero() {
             <div className={`transition-opacity duration-2000 ${mounted ? 'opacity-100' : 'opacity-0'}`}>
                 {/* Efecto izquierdo - aparece desde la izquierda */}
                 <div
-                    className={`absolute top-1/2 -translate-y-1/2 w-[280px] h-[280px] md:w-[500px] md:h-[100px] lg:h-[350px] lg:w-[700px] bg-orange-500/30 rounded-full blur-[120px] pointer-events-none z-0 transition-all duration-1500 ease-out ${mounted ? 'left-[-5%] md:left-[5%] opacity-100' : 'left-[-50%] md:left-[-30%] opacity-0'
-                        }`}
+                    className={`absolute top-1/2 -translate-y-1/2 w-[280px] h-[280px] md:w-[500px] md:h-[100px] lg:h-[350px] lg:w-[700px] bg-orange-500/30 rounded-full blur-[120px] pointer-events-none z-0 transition-all duration-1500 ease-out ${
+                        mounted ? 'left-[-5%] md:left-[5%] opacity-100' : 'left-[-50%] md:left-[-30%] opacity-0'
+                    }`}
                 ></div>
 
                 {/* Efecto derecho - aparece desde la derecha (solo desktop) */}
                 <div
-                    className={`hidden md:block absolute top-1/2 -translate-y-1/2 w-[200px] h-[400px] bg-orange-500/30 rounded-full blur-[120px] pointer-events-none z-0 transition-all duration-1500 ease-out ${mounted ? 'right-[5%] opacity-100' : 'right-[-30%] opacity-0'
-                        }`}
+                    className={`hidden md:block absolute top-1/2 -translate-y-1/2 w-[200px] h-[400px] bg-orange-500/30 rounded-full blur-[120px] pointer-events-none z-0 transition-all duration-1500 ease-out ${
+                        mounted ? 'right-[5%] opacity-100' : 'right-[-30%] opacity-0'
+                    }`}
                 ></div>
 
                 <Particles />
@@ -76,10 +75,10 @@ export default function Hero() {
                         con{' '}
                         {/* Contenedor con ancho fijo para evitar el reflow */}
                         <span className="inline-block min-w-[150px] md:min-w-[280px]">
-                            {/* Palabra Dinámica */}
+                            {/* Palabra Dinámica con animación CSS pura */}
                             <span
-                                className={`inline-block transition-all duration-500 ease-in-out bg-clip-text text-transparent bg-linear-to-r from-orange-400 to-orange-950
-                                ${isVisible ? 'opacity-100 translate-y-0 blur-0' : 'opacity-0 translate-y-4 blur-sm'}`}
+                                key={index}
+                                className="inline-block animate-fade-in bg-clip-text text-transparent bg-gradient-to-r from-orange-400 to-orange-950"
                             >
                                 {WORDS[index]}
                             </span>
