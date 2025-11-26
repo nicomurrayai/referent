@@ -49,21 +49,21 @@ export default function Services() {
 
     const steps: FeatureType[] = [
         {
-            title: "Descubrimiento & análisis",
-            description: "Analizamos tu marca, tu audiencia y tus objetivos para definir una dirección clara y un posicionamiento sólido.",
-            image: "/process1.png",
-            colSpan: 1 // Esto debería hacer que ocupe 2 columnas
+            title: "Posicionamiento Organico",
+            description: "Construimos una marca personal influyente alrededor de tu visión y propósito, para que puedas atraer usuarios, talento e inversión en menos de 60 días",
+            image: "/service3.png",
+            colSpan: 1
         },
         {
-            title: "Desarrollo & Optimización",
-            description: "Creamos los activos clave —contenido, branding y landings de alta conversión— y los optimizamos para maximizar resultados.",
+            title: "Sistema de adquisición",
+            description: "Creamos un flujo de adquisición que identifica, atrae y convierte a tus usuarios ideales con precisión.Menos ruido, más leads calificados y crecimiento sostenido.",
             image: "/process2.png",
             colSpan: 2
         },
         {
-            title: "Lanzamiento & Escala",
-            description: "Implementamos, medimos y ajustamos tu sistema para sostener el crecimiento y escalar tu presencia con consistencia.",
-            image: "/process3.png",
+            title: "Landings pages de alta conversión ",
+            description: "Tu crecimiento, no tu diseño. Creamos y optimizamos la landing que convierte visitas en usuarios pagos, construida con estándares de startup y pensada para escalar.",
+            image: "/service5.png",
             colSpan: 3
         },
     ];

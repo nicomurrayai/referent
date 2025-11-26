@@ -24,7 +24,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
         relative p-8 rounded-3xl bg-white/5 border border-white/10 
         overflow-hidden h-full flex flex-col justify-between
         transition-all duration-300 ease-out
-        hover:scale-[1.02]  hover:shadow-xl hover:shadow-orange-500/30
+        hover:scale-[1.02]  hover:shadow-xl hover:shadow-orange-500/10
       "
     >
       {/* Glow inferior */}
@@ -39,7 +39,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
 
       <div className="relative z-10 flex flex-col justify-between h-full">
         <blockquote className="text-sm md:text-base mb-6 text-white/70">
-          {quote}
+          "{quote}"
         </blockquote>
 
         <div className="flex items-center space-x-4 mt-auto">

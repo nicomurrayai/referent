@@ -11,7 +11,7 @@ export default function FeatureCard({ title, description, image = "/process1.png
                     src={image}
                     alt={title}
                     fill
-                    className="object-contain rounded-2xl"
+                    className="object-contain"
                 />
 
                 {/* Overlay con desvanecido inferior */}
