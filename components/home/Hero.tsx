@@ -39,7 +39,7 @@ export default function Hero() {
     };
 
     return (
-        <div className="relative w-full pb-30 bg-black text-white overflow-hidden font-sans selection:bg-orange-500 selection:text-white">
+        <div className="relative w-full min-h-screen bg-black text-white overflow-hidden font-sans selection:bg-orange-500 selection:text-white">
 
             {/* --- FONDO Y EFECTOS --- */}
             {/* Agregamos una transición lenta al fondo también para que no aparezca de golpe */}
@@ -57,7 +57,7 @@ export default function Hero() {
                     <Navbar />
                 </div>
 
-                <div className="mt-15 md:mt-20 flex flex-col items-center justify-center px-4">
+                <div className="mt-15 md:mt-40 flex flex-col items-center justify-center px-4">
 
                     {/* Badge - Delay 100ms */}
                     <div className={getTransitionClass("delay-100")}>
