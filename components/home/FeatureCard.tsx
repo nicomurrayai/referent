@@ -1,14 +1,11 @@
+import { FeatureType } from "@/types/types";
 import Image from "next/image";
 
-type ProccesType = {
-    title: string,
-    description: string,
-    image: string
-}
-
-export default function ProccessCard({ title, description, image = "/process1.png" }: ProccesType) {
+// Ya no necesitamos 'colSpan' en los props si no lo usaremos para lógica interna
+export default function FeatureCard({ title, description, image = "/process1.png" }: FeatureType) {    
     return (
-        <div className="bg-white/5 p-4 rounded-2xl border border-white/10">
+        // ELIMINADA la clase getColSpanClass() de aquí
+        <div className={`bg-white/5 p-4 rounded-2xl border border-white/10`}>
             <div className="relative w-full h-64 rounded-2xl overflow-hidden">
                 <Image
                     src={image}
