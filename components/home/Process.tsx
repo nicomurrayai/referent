@@ -62,7 +62,7 @@ export default function Process() {
             {/* Usamos inset-0 para que cubra exactamente este componente */}
             <div className={`absolute inset-0 w-full h-full pointer-events-none transition-opacity duration-2000 ${isVisibleInView ? 'opacity-100' : 'opacity-0'}`}>
                 {/* Blobs corregidos (left-[1%] en vez de left[1%]) */}
-                <div className=" absolute bottom-[50%]  md:bottom-[30%] left-[-10%] w-[700px] h-[400px] bg-orange-500/30 rounded-full blur-[120px] z-0"></div>
+                <div className=" absolute bottom-[50%]  md:bottom-[30%] right-[-10%] w-[700px] h-[400px] bg-orange-500/30 rounded-full blur-[120px] z-0"></div>
                 
                 {/* Las partículas ahora viven dentro de este contenedor absoluto */}
                 <Particles />

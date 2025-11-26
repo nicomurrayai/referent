@@ -44,20 +44,24 @@ export default function Hero() {
             {/* --- FONDO Y EFECTOS --- */}
             {/* Agregamos una transición lenta al fondo también para que no aparezca de golpe */}
             <div className={`transition-opacity duration-2000 ${mounted ? 'opacity-100' : 'opacity-0'}`}>
-                <div className="absolute top-[10%] left[1%] h-[280px] md:top-[-10%] md:left-[-10%] w-[60%] md:h-[150px] bg-orange-500/40 rounded-full blur-[120px] pointer-events-none z-0"></div>
-                <div className="hidden md:block absolute bottom-[20%] right-[-10%] w-[700px] h-[400px] bg-orange-500/30 rounded-full blur-[120px] pointer-events-none z-0"></div>
+                {/* Efecto izquierdo - aparece desde la izquierda */}
+                <div
+                    className={`absolute top-1/2 -translate-y-1/2 w-[280px] h-[280px] md:w-[500px] md:h-[100px] lg:h-[350px] lg:w-[700px] bg-orange-500/30 rounded-full blur-[120px] pointer-events-none z-0 transition-all duration-1500 ease-out ${mounted ? 'left-[-5%] md:left-[5%] opacity-100' : 'left-[-50%] md:left-[-30%] opacity-0'
+                        }`}
+                ></div>
+
+                {/* Efecto derecho - aparece desde la derecha (solo desktop) */}
+                <div
+                    className={`hidden md:block absolute top-1/2 -translate-y-1/2 w-[200px] h-[400px] bg-orange-500/30 rounded-full blur-[120px] pointer-events-none z-0 transition-all duration-1500 ease-out ${mounted ? 'right-[5%] opacity-100' : 'right-[-30%] opacity-0'
+                        }`}
+                ></div>
+
                 <Particles />
             </div>
 
             {/* --- CONTENIDO --- */}
             <div className="relative z-10">
-
-                {/* Navbar con delay inicial */}
-                <div className={getTransitionClass("delay-0")}>
-                    <Navbar />
-                </div>
-
-                <div className="mt-15 md:mt-40 flex flex-col items-center justify-center px-4">
+                <div className="mt-15 md:mt-25 flex flex-col items-center justify-center px-4">
 
                     {/* Badge - Delay 100ms */}
                     <div className={getTransitionClass("delay-100")}>

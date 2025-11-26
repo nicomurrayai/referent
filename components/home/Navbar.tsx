@@ -17,7 +17,7 @@ export default function Navbar() {
       {/* Contenedor sticky con padding */}
       <div className="sticky top-0 z-50 w-full flex justify-center py-5 px-4">
         {/* --- NAVBAR PRINCIPAL --- */}
-        <nav className="flex justify-between items-center p-4 w-full rounded-lg bg-black/30 border border-white/5 max-w-[1300px] backdrop-blur-md shadow-lg">
+        <nav className="flex justify-between items-center p-4 w-full rounded-lg  bg-black/40 border border-white/5 max-w-[1300px] backdrop-blur-md shadow-lg">
           {/* Logo */}
           <Link href="/">
             <Image
