@@ -158,5 +158,5 @@ h4 {
 }
 
 .animate-fade-in {
-  animation: fade-in 0.9s ease-out forwards;
+  animation: fade-in 1s ease-out forwards;
 }

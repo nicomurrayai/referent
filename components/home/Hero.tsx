@@ -13,9 +13,9 @@ export default function Hero() {
 
   // Ahora el array acepta height individual por imagen
   const images = [
-    { src: "/allianz8.png", height: 6 },
-    { src: "/philips3.png", height: 4 },
-    { src: "/lacarta3.png", height: 4 },
+    { src: "/allianz.png", height: 2.4 },
+    { src: "/philips3.png", height: 2 },
+    { src: "/lacarta3.png", height: 2 },
   ];
 
   const [index, setIndex] = useState(0);
@@ -69,17 +69,17 @@ export default function Hero() {
                 <div className="*:data-[slot=avatar]:ring-background flex -space-x-2">
                   
                   {/* 🔥 Avatar más chico */}
-                  <Avatar className="w-8 h-8">
+                  <Avatar className="size-5 md:size-7">
                     <AvatarImage src="/avatar2.jpg" alt="@shadcn" />
                     <AvatarFallback>CN</AvatarFallback>
                   </Avatar>
 
-                  <Avatar className="w-8 h-8">
+                  <Avatar className="size-5 md:size-7">
                     <AvatarImage src="/avatar3.jpg" alt="@maxleiter" />
                     <AvatarFallback>LR</AvatarFallback>
                   </Avatar>
 
-                  <Avatar className="w-8 h-8">
+                  <Avatar className="size-5 md:size-7">
                     <AvatarImage src="/avatar4.png" alt="@evilrabbit" />
                     <AvatarFallback>ER</AvatarFallback>
                   </Avatar>
@@ -141,7 +141,7 @@ export default function Hero() {
               "delay-700"
             )}`}
           >
-            <p className="text-center mb-6 text-white/70 text-lg">Confiaron en nosotros</p>
+            <p className="text-center mb-6 text-white/70 text-lg font-medium">Confiaron en nosotros</p>
 
             <div className="scroll-container flex gap-8 items-center">
               {[...images, ...images, ...images].map((image, idx) => (
@@ -152,10 +152,11 @@ export default function Hero() {
                     width={100}
                     height={image.height * 4}
                     /* 🔥Más chicos en mobile + normal en desktop */
-                    className="w-auto object-contain filter grayscale 
-                               h-2.5          /* mobile */
-                               md:h-[15px]      /* tablet */
-                               lg:h-5"     /* desktop */
+                   style={{
+                      height: `${image.height - 1}rem`,
+                    }}
+                    className={`w-auto object-contain filter grayscale 
+                               md:h-[${image.height}rem]`}
                   />
                 </div>
               ))}
