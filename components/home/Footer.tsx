@@ -1,8 +1,20 @@
+"use client";
+
+import { useState } from "react";
 import { FaInstagram, FaLinkedin } from "react-icons/fa";
 import { Input } from "../ui/input";
-import { Send } from "lucide-react";
+import { Check, CircleCheck, Send } from "lucide-react";
+import Link from "next/link";
+import { Button } from "../ui/button";
 
 export default function Footer() {
+
+    const [sended, setSended] = useState(false);
+
+    const handleSubmit = () => {
+        setSended(true);
+    };
+
     return (
         <div className="relative">
             <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[280px] h-[100px] md:w-[500px] md:h-[100px] lg:h-[100px] lg:w-[700px] bg-orange-500/30 rounded-full blur-[120px] pointer-events-none z-0 opacity-100"></div>
@@ -15,13 +27,21 @@ export default function Footer() {
                         <p className="text-sm md:text-base text-white/80">
                             Suscribite al Newsletter para obtener beneficios exclusivos
                         </p>
-                        <div className="relative mt-4 w-full max-w-sm">
+
+                        <div className="mt-4 w-[80%] max-w-sm transition-colors duration-300 rounded-lg flex items-center gap-2">
                             <Input
+                                disabled={sended}
                                 placeholder="Ingresar email"
-                                className="bg-white/10 border-none pr-10" // pr-10 para que no tape el texto
+                                className="bg-white/10 border-none pr-10 text-base"
                             />
 
-                            <Send className="absolute right-3 top-1/2 -translate-y-1/2 text-primary cursor-pointer" />
+                            <Button
+                                disabled={sended}
+                                onClick={handleSubmit}
+                                className={`${sended ? "bg-green-500 hover:bg-green-600" : ""}`}
+                            >
+                                {sended ? <Check /> : <Send />}
+                            </Button>
                         </div>
                     </div>
 
@@ -31,8 +51,8 @@ export default function Footer() {
                             Enterate de cómo trabajamos y nuestras propuestas
                         </p>
                         <div className="flex items-center mt-4 gap-10 justify-end">
-                            <FaInstagram className="size-6 cursor-pointer" />
-                            <FaLinkedin className="size-6 cursor-pointer" />
+                            <Link href="https://www.instagram.com/matinogueraa/"><FaInstagram className="size-6 cursor-pointer" /></Link>
+                            <Link href="https://www.linkedin.com/company/referente-media?trk=public_profile_topcard-current-company"><FaLinkedin className="size-6 cursor-pointer" /></Link>
                         </div>
                     </div>
                 </div>
