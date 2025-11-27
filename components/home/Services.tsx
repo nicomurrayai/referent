@@ -63,7 +63,7 @@ export default function Services() {
         {
             title: "Landings pages de alta conversión ",
             description: "Tu crecimiento, no tu diseño. Creamos y optimizamos la landing que convierte visitas en usuarios pagos, construida con estándares de startup y pensada para escalar.",
-            image: "/service5.png",
+            image: "/service22.png",
             colSpan: 3
         },
     ];
