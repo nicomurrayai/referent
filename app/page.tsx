@@ -15,9 +15,6 @@ export default function Home() {
       <Testimonials />
       <Benefits />
       <Cta />
-
-
-     
       <Footer />
     </>
 

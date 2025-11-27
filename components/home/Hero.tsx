@@ -13,7 +13,7 @@ export default function Hero() {
 
     // Ahora el array acepta height individual por imagen
     const images = [
-        { src: "/allianz.png", height: 6 },
+        { src: "/allianz8.png", height: 6 },
         { src: "/philips3.png", height: 4 },
         { src: "/lacarta3.png", height: 4 },
     ];
