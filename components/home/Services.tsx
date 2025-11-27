@@ -69,7 +69,7 @@ export default function Services() {
     ];
 
     return (
-        <section className="relative w-full py-20 bg-black overflow-hidden">
+        <section id="services" className="relative w-full py-20 bg-black overflow-hidden">
 
             {/* Contenedor de FONDO (Absolute) */}
             <div className={`absolute inset-0 w-full h-full pointer-events-none transition-opacity duration-2000 ${isVisibleInView ? 'opacity-100' : 'opacity-0'}`}>

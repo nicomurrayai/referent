@@ -56,7 +56,7 @@ export default function Process() {
 
     return (
         // CAMBIO 1: Usamos un section 'relative' en lugar de un fragmento '<>'
-        <section className="relative w-full py-20 bg-black overflow-hidden">
+        <section id="process" className="relative w-full py-20 bg-black overflow-hidden">
             
             {/* CAMBIO 2: Contenedor de FONDO (Absolute) */}
             {/* Usamos inset-0 para que cubra exactamente este componente */}

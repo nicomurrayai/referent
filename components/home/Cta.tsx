@@ -36,7 +36,7 @@ export default function Cta() {
     };
 
     return (
-        <div ref={ref} className="flex flex-col items-center justify-center my-40 relative px-2">
+        <div id="contact" ref={ref} className="flex flex-col items-center justify-center my-40 relative px-2">
 
             <Particles />
 

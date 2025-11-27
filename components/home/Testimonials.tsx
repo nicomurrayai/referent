@@ -85,7 +85,7 @@ export default function Testimonials() {
     ];
 
     return (
-        <section className="relative w-full py-20 bg-black overflow-hidden">
+        <section id="testimonials" className="relative w-full py-20 bg-black overflow-hidden">
             <div
                 className={`absolute inset-0 w-full h-full pointer-events-none transition-opacity duration-2000 ${
                     isVisibleInView ? "opacity-100" : "opacity-0"

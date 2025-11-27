@@ -60,7 +60,7 @@ export default function Benefits() {
     ];
 
     return (
-        <section className="relative w-full py-20 bg-black overflow-hidden">
+        <section id="benefits" className="relative w-full py-20 bg-black overflow-hidden">
 
             {/* Fondo con partículas */}
             <div
