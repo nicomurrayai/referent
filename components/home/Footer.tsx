@@ -51,8 +51,8 @@ export default function Footer() {
                             Enterate de cómo trabajamos y nuestras propuestas
                         </p>
                         <div className="flex items-center mt-4 gap-10 justify-end">
-                            <Link href="https://www.instagram.com/matinogueraa/"><FaInstagram className="size-6 cursor-pointer" /></Link>
-                            <Link href="https://www.linkedin.com/company/referente-media?trk=public_profile_topcard-current-company"><FaLinkedin className="size-6 cursor-pointer" /></Link>
+                            <Link target="_blank" href="https://www.instagram.com/matinogueraa/"><FaInstagram className="size-6 cursor-pointer" /></Link>
+                            <Link target="_blank" href="https://www.linkedin.com/company/referente-media?trk=public_profile_topcard-current-company"><FaLinkedin className="size-6 cursor-pointer" /></Link>
                         </div>
                     </div>
                 </div>
