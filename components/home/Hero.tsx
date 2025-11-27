@@ -70,7 +70,7 @@ export default function Hero() {
                     {/* Badge */}
                     <div className={getTransitionClass("delay-100")}>
                         <div className="flex  items-center mb-6 gap-4">
-                            <span className="shadow-gray-400 flex   items-center gap-3  shadow text-white text-xs md:text-base font-medium px-6 py-2 rounded-full bg-black/20">
+                            <span className="shadow-gray-400 flex items-center gap-3  shadow text-white text-[10px] md:text-base font-medium px-6 py-2 rounded-full bg-black/20">
                                 +100M VIEWS <div className="*:data-[slot=avatar]:ring-background flex -space-x-2">
                                     <Avatar>
                                         <AvatarImage src="/avatar2.jpg" alt="@shadcn" />
