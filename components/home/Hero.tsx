@@ -36,11 +36,10 @@ export default function Hero() {
     }, []);
 
     const getTransitionClass = (delayClass = "") => {
-        return `transition-all duration-1000 ease-out transform ${delayClass} ${
-            mounted
-                ? "opacity-100 translate-y-0 filter blur-0"
-                : "opacity-0 translate-y-8 filter blur-sm"
-        }`;
+        return `transition-all duration-1000 ease-out transform ${delayClass} ${mounted
+            ? "opacity-100 translate-y-0 filter blur-0"
+            : "opacity-0 translate-y-8 filter blur-sm"
+            }`;
     };
 
     return (
@@ -109,13 +108,15 @@ export default function Hero() {
                                 Quiero Posicionarme <ArrowUpRight className="w-4 h-4 ml-1" />
                             </Button>
                         </Link>
-
+                        <Link href="/#newsletter"> 
                         <Button
                             variant="outline"
                             className="bg-white/5 hover:bg-transparent hover:text-white"
                         >
                             Ver en acción
-                        </Button>
+                        </Button></Link>
+
+
                     </div>
 
                     {/* Logos con altura dinámica */}

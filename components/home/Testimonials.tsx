@@ -44,7 +44,7 @@ export default function Testimonials() {
             quote: "Referent impulsó mi marca como CEO y me dio la autoridad que necesitaba en LinkedIn para crecer con propósito.",
             name: "Facundo Aguirre",
             title: "CEO",
-            company: "Vippen",
+            company: "Vippinn",
             imageSrc: "/avatar1.jpg",
         },
         {
