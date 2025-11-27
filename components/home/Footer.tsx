@@ -1,77 +1,123 @@
-"use client";
+import React from "react";
+import { FaInstagram, FaLinkedin, FaTiktok } from "react-icons/fa";
+import Image from "next/image";
 
-import { useState } from "react";
-import { FaInstagram, FaLinkedin } from "react-icons/fa";
-import { Input } from "../ui/input";
-import { Check, CircleCheck, Send } from "lucide-react";
-import Link from "next/link";
-import { Button } from "../ui/button";
-
-export default function Footer() {
-
-    const [sended, setSended] = useState(false);
-
-    const handleSubmit = () => {
-        setSended(true);
-    };
-
-    return (
-        <div className="relative">
-            {/* Script de Beehiiv */}
-            <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
-
-            {/* Iframe de Beehiiv corregido para JSX */}
-            <div id="newsletter" className="w-full flex justify-center mt-10">
-                <iframe
-                    src="https://subscribe-forms.beehiiv.com/4daf3ffb-afcc-4e2c-82f7-1dc3403f00f3"
-                    className="beehiiv-embed"
-                    data-test-id="beehiiv-embed"
-                    frameBorder="0"
-                    scrolling="no"
-                    style={{
-                        width: "60%",
-                        height: "315px",
-                        margin: 0,
-                        borderRadius: "0px",
-                        backgroundColor: "transparent",
-                        boxShadow: "0 0 #0000",
-                        maxWidth: "100%",
-                    }}
-                ></iframe>
-            </div>
-            <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[280px] h-[100px] md:w-[500px] md:h-[100px] lg:h-[100px] lg:w-[700px] bg-orange-500/30 rounded-full blur-[120px] pointer-events-none z-0 opacity-100"></div>
-
-            <div className="max-w-[1300px] mx-auto py-20 border-t border-white/20 relative px-4">
-
-                <div className="flex flex-col md:flex-row items-start justify-between gap-8 md:gap-4 relative z-10">
-                    <div className="max-w-md">
-                        <div>
-                            <div className="max-w-md">
-                                <p className="text-xl md:text-2xl font-bold mb-2">Secciones</p>
-                                <p className="text-xs md:text-sm text-white/80 flex flex-col gap-3">
-                                    <Link href="#">Procesos</Link>
-                                    <Link href="#">Servicios</Link>
-                                    <Link href="#">Beneficios</Link>
-                                    <Link href="#">Testimonios</Link>
-                                    <Link href="#">Contacto</Link>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="text-left md:text-right max-w-md">
-                        <p className="text-lg md:text-xl font-bold mb-2">Seguinos en nuestras redes</p>
-                        <p className="text-sm md:text-base text-white/80">
-                            Enterate de cómo trabajamos y nuestras propuestas
-                        </p>
-                        <div className="flex items-center mt-4 gap-10 justify-end">
-                            matias@referent.site
-                            <Link target="_blank" href="https://www.instagram.com/matinogueraa/"><FaInstagram className="size-6 cursor-pointer" /></Link>
-                            <Link target="_blank" href="https://www.linkedin.com/company/referente-media?trk=public_profile_topcard-current-company"><FaLinkedin className="size-6 cursor-pointer" /></Link>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    );
+interface Footer7Props {
+  logo?: {
+    url: string;
+    src: string;
+    alt: string;
+    title: string;
+  };
+  sections?: Array<{
+    title: string;
+    links: Array<{ name: string; href: string }>;
+  }>;
+  description?: string;
+  socialLinks?: Array<{
+    icon: React.ReactElement;
+    href: string;
+    label: string;
+  }>;
+  copyright?: string;
+  legalLinks?: Array<{
+    name: string;
+    href: string;
+  }>;
 }
+
+const defaultSections = [
+  {
+    title: "Referent",
+    links: [
+      { name: "Procesos", href: "/#features" },
+      { name: "Servicios", href: "/#pricing" },
+      { name: "Beneficios", href: "/#faqs" },
+      { name: "Testimonios", href: "/#faqs" },
+      { name: "Contacto", href: "/#faqs" },
+    ],
+  },
+  {
+    title: "Mails",
+    links: [
+      { name: "matias@referent.site", href: "mailto:matias@referent.site" },
+    ],
+  },
+//   {
+//     title: "Legales",
+//     links: [
+//       { name: "Terminos y condiciones", href: "termns" },
+//       { name: "Politicas de privacidad", href: "politics" },
+//     ],
+//   }
+];
+
+const defaultSocialLinks = [
+  { icon: <FaInstagram className="size-5" />, href: "https://www.instagram.com/matinogueraa/", label: "Instagram" },
+  { icon: <FaLinkedin className="size-5" />, href: "https://www.linkedin.com/company/referente-media?trk=public_profile_topcard-current-company", label: "TikTok" },
+];
+
+const defaultLegalLinks = [
+  { name: "Terminos y condiciones", href: "termns" },
+  { name: "Politicas de privacidad", href: "politics" },
+];
+
+export const Footer7 = ({
+  sections = defaultSections,
+  description = "Seguinos en nuestras redes.",
+  socialLinks = defaultSocialLinks,
+  copyright = "© 2025 referent.site Todos los derechos reservados.",
+  legalLinks = defaultLegalLinks,
+}: Footer7Props) => {
+  return (
+    <section className="pt-42 max-w-[1300px] mx-auto px-4 md:px-0">
+      <div className="">
+        <div className="flex w-full flex-col justify-between gap-10 lg:flex-row lg:items-start lg:text-left">
+          <div className="flex w-full flex-col justify-between gap-6 lg:items-start">
+           
+            <p className="max-w-[70%]  text-white text-lg font-bold">
+              {description}
+            </p>
+            <ul className="flex items-center space-x-6 text-muted-foreground">
+              {socialLinks.map((social, idx) => (
+                <li key={idx} className="font-medium text-primary">
+                  <a href={social.href} aria-label={social.label}>
+                    {social.icon}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="grid w-full gap-6 md:grid-cols-3 lg:gap-20">
+            {sections.map((section, sectionIdx) => (
+              <div key={sectionIdx}>
+                <h5 className="mb-4 font-bold">{section.title}</h5>
+                <ul className="space-y-3 text-sm text-muted-foreground">
+                  {section.links.map((link, linkIdx) => (
+                    <li
+                      key={linkIdx}
+                      className="font-medium hover:text-primary"
+                    >
+                      <a href={link.href}>{link.name}</a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="mt-8 flex flex-col justify-between gap-4 border-t py-8 text-xs font-medium text-muted-foreground md:flex-row md:items-center md:text-left">
+          <p className="order-2 lg:order-1">{copyright}</p>
+          {/* <ul className="order-1 flex flex-col gap-2 md:order-2 md:flex-row">
+            {legalLinks.map((link, idx) => (
+              <li key={idx} className="hover:">
+                <a href={link.href}> {link.name}</a>
+              </li>
+            ))}
+          </ul> */}
+        </div>
+      </div>
+    </section>
+  );
+};
+
