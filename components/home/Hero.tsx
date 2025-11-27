@@ -15,6 +15,7 @@ export default function Hero() {
     const images = [
         { src: "/allianz.png", height: 6 },
         { src: "/philips3.png", height: 4 },
+        { src: "/lacarta2.png", height: 4 },
     ];
 
     const [index, setIndex] = useState(0);
