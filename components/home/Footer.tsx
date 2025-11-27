@@ -32,11 +32,11 @@ const defaultSections = [
   {
     title: "Referent",
     links: [
-      { name: "Procesos", href: "/#features" },
-      { name: "Servicios", href: "/#pricing" },
-      { name: "Beneficios", href: "/#faqs" },
-      { name: "Testimonios", href: "/#faqs" },
-      { name: "Contacto", href: "/#faqs" },
+      { name: "Procesos", href: "/#process" },
+      { name: "Servicios", href: "/#services" },
+      { name: "Beneficios", href: "/#benefits" },
+      { name: "Testimonios", href: "/#testimonials" },
+      { name: "Contacto", href: "/#contact" },
     ],
   },
   {
