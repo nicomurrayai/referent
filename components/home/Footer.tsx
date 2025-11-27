@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useState, useEffect } from "react";
 import { FaInstagram, FaLinkedin, FaTiktok } from "react-icons/fa";
 import Image from "next/image";
 
@@ -43,18 +45,11 @@ const defaultSections = [
       { name: "matias@referent.site", href: "mailto:matias@referent.site" },
     ],
   },
-//   {
-//     title: "Legales",
-//     links: [
-//       { name: "Terminos y condiciones", href: "termns" },
-//       { name: "Politicas de privacidad", href: "politics" },
-//     ],
-//   }
 ];
 
 const defaultSocialLinks = [
   { icon: <FaInstagram className="size-5" />, href: "https://www.instagram.com/matinogueraa/", label: "Instagram" },
-  { icon: <FaLinkedin className="size-5" />, href: "https://www.linkedin.com/company/referente-media?trk=public_profile_topcard-current-company", label: "TikTok" },
+  { icon: <FaLinkedin className="size-5" />, href: "https://www.linkedin.com/company/referente-media?trk=public_profile_topcard-current-company", label: "LinkedIn" },
 ];
 
 const defaultLegalLinks = [
@@ -69,13 +64,47 @@ export const Footer7 = ({
   copyright = "© 2025 referent.site Todos los derechos reservados.",
   legalLinks = defaultLegalLinks,
 }: Footer7Props) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const footerRef = React.useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      {
+        threshold: 0.1,
+        rootMargin: "0px 0px -100px 0px"
+      }
+    );
+
+    if (footerRef.current) {
+      observer.observe(footerRef.current);
+    }
+
+    return () => {
+      if (footerRef.current) {
+        observer.unobserve(footerRef.current);
+      }
+    };
+  }, []);
+
+  const getTransitionClass = (delayClass = "") => {
+    return `transition-all duration-1000 ease-out transform ${delayClass} ${
+      isVisible
+        ? "opacity-100 translate-y-0 filter blur-0"
+        : "opacity-0 translate-y-8 filter blur-sm"
+    }`;
+  };
+
   return (
-    <section className="pt-42 max-w-[1300px] mx-auto px-4 md:px-0">
+    <section ref={footerRef} className="pt-42 max-w-[1300px] mx-auto px-4 md:px-0">
       <div className="">
         <div className="flex w-full flex-col justify-between gap-10 lg:flex-row lg:items-start lg:text-left">
-          <div className="flex w-full flex-col justify-between gap-6 lg:items-start">
-           
-            <p className="max-w-[70%]  text-white text-lg font-bold">
+          <div className={`flex w-full flex-col justify-between gap-6 lg:items-start ${getTransitionClass("delay-100")}`}>
+            <p className="max-w-[70%] text-white text-lg font-bold">
               {description}
             </p>
             <ul className="flex items-center space-x-6 text-muted-foreground">
@@ -88,7 +117,7 @@ export const Footer7 = ({
               ))}
             </ul>
           </div>
-          <div className="grid w-full gap-6 md:grid-cols-3 lg:gap-20">
+          <div className={`grid w-full gap-6 md:grid-cols-3 lg:gap-20 ${getTransitionClass("delay-200")}`}>
             {sections.map((section, sectionIdx) => (
               <div key={sectionIdx}>
                 <h5 className="mb-4 font-bold">{section.title}</h5>
@@ -106,18 +135,10 @@ export const Footer7 = ({
             ))}
           </div>
         </div>
-        <div className="mt-8 flex flex-col justify-between gap-4 border-t py-8 text-xs font-medium text-muted-foreground md:flex-row md:items-center md:text-left">
+        <div className={`mt-8 flex flex-col justify-between gap-4 border-t border-white/30 py-8 text-xs font-medium text-muted-foreground md:flex-row md:items-center md:text-left ${getTransitionClass("delay-300")}`}>
           <p className="order-2 lg:order-1">{copyright}</p>
-          {/* <ul className="order-1 flex flex-col gap-2 md:order-2 md:flex-row">
-            {legalLinks.map((link, idx) => (
-              <li key={idx} className="hover:">
-                <a href={link.href}> {link.name}</a>
-              </li>
-            ))}
-          </ul> */}
         </div>
       </div>
     </section>
   );
 };
-
