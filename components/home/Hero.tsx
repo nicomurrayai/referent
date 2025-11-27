@@ -6,6 +6,7 @@ import { Button } from "../ui/button";
 import Particles from "../Particles";
 import Link from "next/link";
 import Image from "next/image";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
 export default function Hero() {
 
@@ -65,13 +66,33 @@ export default function Hero() {
 
             {/* --- CONTENIDO PRINCIPAL --- */}
             <div className="relative z-10">
-                <div className="mt-15 md:mt-25 flex flex-col items-center justify-center px-4">
-
+                <div className="mt-15 md:mt-19 flex flex-col items-center justify-center px-4">
                     {/* Badge */}
                     <div className={getTransitionClass("delay-100")}>
-                        <span className="shadow-gray-400 shadow text-white text-xs md:text-base font-medium px-3 py-1 rounded-full bg-black/40 mb-6 inline-block">
-                            200M VIEWS
-                        </span>
+                        <div className="flex  items-center mb-6 gap-4">
+                            <span className="shadow-gray-400 flex   items-center gap-3  shadow text-white text-xs md:text-base font-medium px-6 py-2 rounded-full bg-black/20">
+                                +100M VIEWS <div className="*:data-[slot=avatar]:ring-background flex -space-x-2">
+                                    <Avatar>
+                                        <AvatarImage src="/avatar2.jpg" alt="@shadcn" />
+                                        <AvatarFallback>CN</AvatarFallback>
+                                    </Avatar>
+                                    <Avatar>
+                                        <AvatarImage
+                                            src="/avatar3.jpg"
+                                            alt="@maxleiter"
+                                        />
+                                        <AvatarFallback>LR</AvatarFallback>
+                                    </Avatar>
+                                    <Avatar>
+                                        <AvatarImage
+                                            src="/avatar4.png"
+                                            alt="@evilrabbit"
+                                        />
+                                        <AvatarFallback>ER</AvatarFallback>
+                                    </Avatar>
+                                </div>
+                            </span>
+                        </div>
                     </div>
 
                     {/* Título principal */}
@@ -83,7 +104,7 @@ export default function Hero() {
                         <span className="inline-block min-w-[150px] md:min-w-[280px]">
                             <span
                                 key={index}
-                                className="inline-block animate-fade-in bg-clip-text text-transparent bg-gradient-to-r from-orange-400 to-orange-950"
+                                className="inline-block animate-fade-in bg-clip-text text-transparent bg-linear-to-r from-orange-400 to-orange-950"
                             >
                                 {WORDS[index]}
                             </span>
@@ -108,23 +129,23 @@ export default function Hero() {
                                 Quiero Posicionarme <ArrowUpRight className="w-4 h-4 ml-1" />
                             </Button>
                         </Link>
-                        <Link href="/#newsletter"> 
-                        <Button
-                            variant="outline"
-                            className="bg-white/5 hover:bg-transparent hover:text-white"
-                        >
-                            Ver en acción
-                        </Button></Link>
+                        <Link href="/#newsletter">
+                            <Button
+                                variant="outline"
+                                className="bg-white/5 hover:bg-transparent hover:text-white"
+                            >
+                                Ver en acción
+                            </Button></Link>
 
 
                     </div>
 
-                    {/* Logos con altura dinámica */}
                     <div
                         className={`overflow-hidden w-[80%] md:w-[400px] mx-auto mt-15 rounded-full ${getTransitionClass(
                             "delay-700"
                         )}`}
                     >
+                        <p className="text-center mb-6 text-white/70 text-lg">Confiaron en nosotros</p>
                         <div className="scroll-container flex gap-8 items-center">
                             {[...images, ...images, ...images].map((image, idx) => (
                                 <div key={idx} className="shrink-0">
