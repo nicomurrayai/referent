@@ -1,5 +1,6 @@
 import Benefits from "@/components/home/Benefits";
 import Cta from "@/components/home/Cta";
+import Footer from "@/components/home/Footer";
 import Hero from "@/components/home/Hero";
 import Process from "@/components/home/Process";
 import Services from "@/components/home/Services";
@@ -14,6 +15,7 @@ export default function Home() {
       <Testimonials />
       <Benefits />
       <Cta />
+      <Footer />
     </>
   )
 }

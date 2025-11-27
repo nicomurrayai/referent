@@ -58,7 +58,7 @@ export default function Testimonials() {
             quote: "Referent instaló un sistema de adquisición que duplicó mi audiencia y posicionó mi mensaje frente a las personas correctas.",
             name: "Grace Reynosa",
             title: "CEO",
-            company: "Metodo ATA",
+            company: "Metodo AYA",
             imageSrc: "/avatar3.jpg",
         },
         {
