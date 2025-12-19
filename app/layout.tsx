@@ -11,7 +11,10 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   title: "Referent",
-  description: "Posicionamento de CEOs y Startups",
+  description: "Posicionamento de CEOs y Startups con contenido",
+  icons: {
+    icon:"/favicon.png"
+  }
 };
 
 export default function RootLayout({

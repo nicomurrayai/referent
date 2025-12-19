@@ -138,11 +138,11 @@ export default function Hero() {
           <div className={`w-full max-w-3xl px-4 md:px-0 mt-12 ${getTransitionClass("delay-600")}`}>
             <div className="relative group">
               <video
-                poster="/poster.png"
+                poster="/poster.webp"
                 controls
+                playsInline
                 src="https://cdn.jumpshare.com/preview/1sWxMhlBmq4XiBiQ9EYckVueaEdJgjj3B4cfJ3Mgky0E0k9VPexaAEqCP-lWGaC23UQxk7_gBvW7rWB653UV2QqFYCKUhK21eW2yuxDagao"
-                className="relative w-full h-auto rounded-2xl shadow-2xl border border-white/10 object-cover drop-shadow-[0_0_50px_rgba(255,90,0,0.7)]
-"
+                className="relative w-full h-auto rounded-2xl shadow-2xl border border-white/10 object-cover drop-shadow-[0_0_50px_rgba(255,90,0,0.7)]"
               />
             </div>
           </div>
