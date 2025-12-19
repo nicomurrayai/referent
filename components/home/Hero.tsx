@@ -34,11 +34,10 @@ export default function Hero() {
   }, []);
 
   const getTransitionClass = (delayClass = "") => {
-    return `transition-all duration-1000 ease-out transform ${delayClass} ${
-      mounted
-        ? "opacity-100 translate-y-0 filter blur-0"
-        : "opacity-0 translate-y-8 filter blur-sm"
-    }`;
+    return `transition-all duration-1000 ease-out transform ${delayClass} ${mounted
+      ? "opacity-100 translate-y-0 filter blur-0"
+      : "opacity-0 translate-y-8 filter blur-sm"
+      }`;
   };
 
   return (
@@ -67,7 +66,7 @@ export default function Hero() {
               <span className="shadow-gray-400 flex items-center gap-3  shadow text-white text-[10px] md:text-sm font-medium px-6 py-2 rounded-full bg-black/20">
                 +100M VIEWS{" "}
                 <div className="*:data-[slot=avatar]:ring-background flex -space-x-2">
-                  
+
                   {/* 🔥 Avatar más chico */}
                   <Avatar className="size-5 md:size-7">
                     <AvatarImage src="/avatar2.jpg" alt="@shadcn" />
@@ -135,12 +134,20 @@ export default function Hero() {
             </Link>
           </div>
 
+          {/* --- SECCIÓN DE VIDEO --- */}
+          <div className={`w-full max-w-3xl px-4 md:px-0 mt-12 ${getTransitionClass("delay-600")}`}>
+            <div className="relative group">
+              <video
+                poster="/poster.png"
+                controls
+                src="https://cdn.jumpshare.com/preview/1sWxMhlBmq4XiBiQ9EYckVueaEdJgjj3B4cfJ3Mgky0E0k9VPexaAEqCP-lWGaC23UQxk7_gBvW7rWB653UV2QqFYCKUhK21eW2yuxDagao"
+                className="relative w-full h-auto rounded-2xl shadow-2xl border border-white/10 object-cover drop-shadow-[0_0_50px_rgba(255,90,0,0.7)]
+"
+              />
+            </div>
+          </div>
           {/* Logos Marcas */}
-          <div
-            className={`overflow-hidden w-[80%] md:w-[400px] mx-auto mt-15 rounded-full ${getTransitionClass(
-              "delay-700"
-            )}`}
-          >
+          <div className={`overflow-hidden w-[80%] md:w-[400px] mx-auto mt-15 rounded-full ${getTransitionClass("delay-700")}`}>
             <p className="text-center mb-6 text-white/70 text-lg font-medium">Confiaron en nosotros</p>
 
             <div className="scroll-container flex gap-8 items-center">
@@ -152,7 +159,7 @@ export default function Hero() {
                     width={100}
                     height={image.height * 4}
                     /* 🔥Más chicos en mobile + normal en desktop */
-                   style={{
+                    style={{
                       height: `${image.height - 1}rem`,
                     }}
                     className={`w-auto object-contain filter grayscale 
