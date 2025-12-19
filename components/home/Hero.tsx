@@ -59,7 +59,7 @@ export default function Hero() {
 
       {/* --- CONTENIDO PRINCIPAL --- */}
       <div className="relative z-10">
-        <div className="mt-15 md:mt-19 flex flex-col items-center justify-center px-4">
+        <div className="mt-13 md:mt-16 flex flex-col items-center justify-center px-4">
           {/* Badge */}
           <div className={getTransitionClass("delay-100")}>
             <div className="flex  items-center mb-6 gap-4">
