@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/home/Navbar";
-import Particles from "@/components/Particles";
 
 const outfit = Outfit({
   subsets: ["latin"],

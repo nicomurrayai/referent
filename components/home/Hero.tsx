@@ -141,7 +141,7 @@ export default function Hero() {
                 poster="/poster.webp"
                 controls
                 playsInline
-                src="https://cdn.jumpshare.com/preview/1sWxMhlBmq4XiBiQ9EYckVueaEdJgjj3B4cfJ3Mgky0E0k9VPexaAEqCP-lWGaC23UQxk7_gBvW7rWB653UV2QqFYCKUhK21eW2yuxDagao"
+                src="https://cdn.jumpshare.com/preview/1sWxMhlBmq4XiBiQ9EYckVueaEdJgjj3B4cfJ3Mgky0E0k9VPexaAEqCP-lWGaC2FgIV9gq12MC4U5Y1RLX0Xwkaws4VGNbsxas0P9gSqf0"
                 className="relative w-full h-auto rounded-2xl shadow-2xl border border-white/10 object-cover drop-shadow-[0_0_50px_rgba(255,90,0,0.7)]"
               />
             </div>
