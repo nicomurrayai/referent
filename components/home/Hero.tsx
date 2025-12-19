@@ -126,12 +126,12 @@ export default function Hero() {
                 Quiero Posicionarme <ArrowUpRight className="w-4 h-4 ml-1" />
               </Button>
             </Link>
-
+{/* 
             <Link href="/#newsletter">
               <Button variant="outline" className="bg-white/5 hover:bg-transparent hover:text-white">
                 Ver en acción
               </Button>
-            </Link>
+            </Link> */}
           </div>
 
           {/* --- SECCIÓN DE VIDEO --- */}
