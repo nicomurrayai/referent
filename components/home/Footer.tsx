@@ -38,13 +38,7 @@ const defaultSections = [
       { name: "Testimonios", href: "/#testimonials" },
       { name: "Contacto", href: "/#contact" },
     ],
-  },
-  {
-    title: "Mails",
-    links: [
-      { name: "matias@referent.site", href: "mailto:matias@referent.site" },
-    ],
-  },
+  }
 ];
 
 const defaultSocialLinks = [
