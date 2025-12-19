@@ -33,7 +33,6 @@ export default function Navbar() {
             <div className="flex items-center gap-6 text-sm font-medium text-white">
               <Link href="/#process" className="hover:text-primary transition-colors">Procesos</Link>
               <Link href="/#services" className="hover:text-primary transition-colors">Servicios</Link>
-              <Link href="/#benefits" className="hover:text-primary transition-colors">Beneficios</Link>
               <Link href="/#testimonials" className="hover:text-primary transition-colors">Testimonios</Link>
               <Link href="/#contact" className="hover:text-primary transition-colors">Contacto</Link>
             </div>
@@ -102,13 +101,6 @@ export default function Navbar() {
               className="text-2xl font-medium text-white hover:text-primary transition-colors py-2"
             >
               Servicios
-            </Link>
-            <Link
-              href="/#benefits"
-              onClick={handleLinkClick}
-              className="text-2xl font-medium text-white hover:text-primary transition-colors py-2"
-            >
-              Beneficios
             </Link>
             <Link
               href="/#testimonials"
