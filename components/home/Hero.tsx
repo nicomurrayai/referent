@@ -141,7 +141,7 @@ export default function Hero() {
                 poster="/poster.webp"
                 controls
                 playsInline
-                src="https://cdn.jumpshare.com/preview/1sWxMhlBmq4XiBiQ9EYckVueaEdJgjj3B4cfJ3Mgky0E0k9VPexaAEqCP-lWGaC2FgIV9gq12MC4U5Y1RLX0Xwkaws4VGNbsxas0P9gSqf0"
+                src="https://cdn-cf-east.streamable.com/video/mp4/rlurqw.mp4?Expires=1766538581880&Key-Pair-Id=APKAIEYUVEN4EVB2OKEQ&Signature=KC3O7cb~nGBrIbFj0qjqzfu0G56oUcLhvcr0IATcpbSpxWVs3HsDNgnq06mjTGFRLWzf0Dy4DJTHzMrMGMPHdAF6QdSnN9UTfFb5SdZzUnDbCx3TJqRULeXzOQQqeDjud0znJRqTBqLCg2ZbdM1rhn36o3~oMLwkLeagTdf-k6bXID2XxEAjdbcHmkPM2zoV-WfpFHSp3hmoxtkqEEEYhsZTAFPrbWWwwK8P7OTQTin1Fg5q53KSrTewZt3Ahy1vUOEgFlZdmwVjfToALE8HQ5NFIQcY6K0o7r3L7ZOcyTk-YQ0KgRFuSH51dZDvoJn-f1n765dK7BzA57L-2wW8Wg__"
                 className="relative w-full h-auto rounded-2xl shadow-2xl border border-white/10 object-cover drop-shadow-[0_0_50px_rgba(255,90,0,0.7)]"
               />
             </div>
