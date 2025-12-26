@@ -89,7 +89,7 @@ export default function Hero() {
 
           {/* Título */}
           <h1
-            className={`text-center text-4xl md:text-5xl tracking-tight text-white/80 leading-tight ${getTransitionClass(
+            className={`text-center text-2xl md:text-5xl tracking-tight text-white/80 leading-tight ${getTransitionClass(
               "delay-200 max-w-7xl"
             )}`}
           >
@@ -98,7 +98,7 @@ export default function Hero() {
 
           {/* Subtítulo */}
           <h2
-            className={`text-lg md:text-xl text-gray-400 mt-6 text-center font-light ${getTransitionClass(
+            className={`text-base md:text-xl text-gray-400 mt-6 text-center font-light ${getTransitionClass(
               "delay-300"
             )}`}
           >
