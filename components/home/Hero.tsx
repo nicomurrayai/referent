@@ -89,21 +89,11 @@ export default function Hero() {
 
           {/* Título */}
           <h1
-            className={`text-center text-4xl md:text-6xl tracking-tight text-white/80 leading-tight ${getTransitionClass(
-              "delay-200"
+            className={`text-center text-4xl md:text-5xl tracking-tight text-white/80 leading-tight ${getTransitionClass(
+              "delay-200 max-w-7xl"
             )}`}
           >
-            Posicionando <br className="md:hidden" />
-            CEOs y Startups <br />
-            con{" "}
-            <span className="inline-block min-w-[150px] md:min-w-[280px]">
-              <span
-                key={index}
-                className="inline-block animate-fade-in bg-clip-text text-transparent bg-linear-to-r from-orange-400 to-orange-950"
-              >
-                {WORDS[index]}
-              </span>
-            </span>
+            Te convertimos en el CEO que tu mercado necesita que seas, convirtiéndote en la mejor opción en tu nicho sin anuncios.
           </h1>
 
           {/* Subtítulo */}
@@ -115,18 +105,18 @@ export default function Hero() {
             Instalamos sistemas de posicionamiento <br className="md:hidden" />
             que atraen{" "}
             <strong className="text-white font-semibold">
-              usuarios, talento e inversión.
+              usuarios, talento e inversión en 60 días.
             </strong>
           </h2>
 
           {/* Botones */}
           <div className={`flex items-center gap-4 mt-10 ${getTransitionClass("delay-500")}`}>
-            <Link target="_blank" href="https://calendly.com/matiasnoguera">
+            <Link target="_blank" href="https://calendly.com/matiasnogueraa">
               <Button>
                 Quiero Posicionarme <ArrowUpRight className="w-4 h-4 ml-1" />
               </Button>
             </Link>
-{/* 
+            {/* 
             <Link href="/#newsletter">
               <Button variant="outline" className="bg-white/5 hover:bg-transparent hover:text-white">
                 Ver en acción

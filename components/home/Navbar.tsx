@@ -38,7 +38,7 @@ export default function Navbar() {
             </div>
 
             <div className="flex items-center gap-2 ml-4">
-              <Link target="_blank" href="https://calendly.com/matiasnoguera">
+              <Link target="_blank" href="https://calendly.com/matiasnogueraa">
                 <Button>Agendar llamada <ArrowUpRight /></Button>
               </Link>
 

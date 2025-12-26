@@ -78,7 +78,7 @@ export default function Cta() {
                     "relative z-10 " + getTransitionClass("delay-300")
                 }
             >
-                <Link target="_blank" href="https://calendly.com/matiasnoguera">
+                <Link target="_blank" href="https://calendly.com/matiasnogueraa">
                     <Button className="mt-12">
                         Agendar una llamada <ArrowUpRight />
                     </Button>
