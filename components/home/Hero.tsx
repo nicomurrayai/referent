@@ -16,6 +16,7 @@ export default function Hero() {
     { src: "/allianz.png", height: 2.4 },
     { src: "/philips3.png", height: 2 },
     { src: "/vipping5.png", height: 3.5 },
+    { src: "/pixelarios1.png", height: 3 },
   ];
 
   const [index, setIndex] = useState(0);
