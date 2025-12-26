@@ -15,7 +15,7 @@ export default function Hero() {
   const images = [
     { src: "/allianz.png", height: 2.4 },
     { src: "/philips3.png", height: 2 },
-    { src: "/lacarta3.png", height: 2 },
+    { src: "/vipping5.png", height: 3.5 },
   ];
 
   const [index, setIndex] = useState(0);
@@ -152,7 +152,7 @@ export default function Hero() {
                     style={{
                       height: `${image.height - 1}rem`,
                     }}
-                    className={`w-auto object-contain filter grayscale 
+                    className={`w-auto  object-contain filter grayscale 
                                md:h-[${image.height}rem]`}
                   />
                 </div>
